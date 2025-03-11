@@ -55,4 +55,11 @@ public class AudioManager : MonoBehaviour
             musicAudio.loop = true;
         }
     }
+
+    public void RestartMusic()
+{
+    musicAudio.Stop();
+    musicAudio.Play();
+}
+
 }
