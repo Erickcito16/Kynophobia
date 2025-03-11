@@ -60,7 +60,7 @@ public class PlayerControlllerLuis : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Cristal"))
         {
             ScorePlayer.UpdateScore(10);
             Destroy(other.gameObject);
