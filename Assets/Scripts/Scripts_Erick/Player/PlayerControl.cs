@@ -6,15 +6,18 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody rb;
     public Transform comienzoRayo;
+    public ParticleSystem explocionDeParticulas;
 
     private Animator animator;
     private bool caminarDerecha = true;
+    private GameManager gameManager;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     
@@ -31,15 +34,36 @@ public class PlayerControl : MonoBehaviour
             animator.SetTrigger("cayendo");
         }
 
+        if( transform.position.y < -2) // Si el jugador cae al vacio.
+        {
+            gameManager.GameOver();
+        }
+
     }
 
     private void FixedUpdate()
     {
-        rb.transform.position = transform.position + transform.forward * 2 * Time.fixedDeltaTime;
+        if (!gameManager.juegoIniciado)
+        {
+            return;
+        }
+        else
+        {
+            animator.SetTrigger("comenzoJuego");
+        }
+
+         rb.transform.position = transform.position + transform.forward * 2 * Time.fixedDeltaTime;
+        
     }
 
     private void CambiarDireccion()
     {
+        if(!gameManager.juegoIniciado)
+        {
+            return;
+        }
+
+
         caminarDerecha = !caminarDerecha;
         if (caminarDerecha)
         {
@@ -48,6 +72,22 @@ public class PlayerControl : MonoBehaviour
         else
         {
             transform.rotation = Quaternion.Euler(0, -45, 0);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag ("Cristal"))
+        {
+            if(explocionDeParticulas != null)
+            {
+                explocionDeParticulas.Play();
+            }
+
+
+
+            Destroy(other.gameObject);
+            gameManager.AumentarPuntaje();
         }
     }
 }
