@@ -90,7 +90,7 @@ public class PlayerControl : MonoBehaviour
             {
                 explocionDeParticulas.Play();
             }
-            
+            AudioManager.Instance.PlaySFX("Collect Item");
             ScorePlayer.UpdateScore(10);
             Destroy(other.gameObject);
             gameManager.AumentarPuntaje();
