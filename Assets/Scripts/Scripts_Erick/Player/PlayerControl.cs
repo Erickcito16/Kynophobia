@@ -11,6 +11,8 @@ public class PlayerControl : MonoBehaviour
     private Animator animator;
     private bool caminarDerecha = true;
     private GameManager gameManager;
+    
+    private Score ScorePlayer;
 
 
     void Awake()
@@ -18,6 +20,11 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         gameManager = FindObjectOfType<GameManager>();
+    }
+
+      void Start()
+    {
+        ScorePlayer = GameObject.FindObjectOfType<Score>();
     }
 
     
@@ -83,9 +90,8 @@ public class PlayerControl : MonoBehaviour
             {
                 explocionDeParticulas.Play();
             }
-
-
-
+            
+            ScorePlayer.UpdateScore(10);
             Destroy(other.gameObject);
             gameManager.AumentarPuntaje();
         }
