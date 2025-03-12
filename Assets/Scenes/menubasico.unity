@@ -5301,7 +5301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presiona la barra espaciadora para girar 90\xB0 y cambiar de direcci\xF3n.\n\xA1Decide
+  m_text: "Presiona la barra espaciadora para girar 90 grados y cambiar de direcci\xF3n.\n\xA1Decide
     r\xE1pido! Un giro equivocado podr\xEDa ser tu final\u2026\n\xBFPodr\xE1s escapar
     de tu miedo o quedar\xE1s atrapado en la pesadilla?"
   m_isRightToLeft: 0
