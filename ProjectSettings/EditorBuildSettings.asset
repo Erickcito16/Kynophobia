@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/menubasico.unity
-    guid: c3b02474589751e489aee81e920eb901
+    path: Assets/Scenes/menubasico Luis.unity
+    guid: 799efbeac36e1ab4fb415d0b034f7742
   - enabled: 1
     path: Assets/Scenes/Juego_Erick.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
