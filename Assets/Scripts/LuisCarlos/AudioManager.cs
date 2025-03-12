@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource sfxAudio, musicAudio;
     public Sound[] musicSounds, sfxSounds;
 
+    
+
     void Awake()
     {
         if (Instance == null)
@@ -52,6 +54,7 @@ public class AudioManager : MonoBehaviour
         if (music == null)
         {
             Debug.Log("Sound Not Found");
+            Debug.Log(music);
         }
 
         else
