@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
-    public float speed = 3.0f;
-    public float rotationSpeed = 5.0f;
+    private float speed = 2.7f;
+    private float rotationSpeed = 2.7f;
     private Rigidbody enemyRb;
     private GameObject player;
     private Animator animator;

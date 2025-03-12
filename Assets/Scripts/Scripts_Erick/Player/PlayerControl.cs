@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     private GameManager gameManager;
 
     private Score ScorePlayer;
-    private int puntajeMaximo = 10;
+    private int puntajeMaximo = 1000;
 
 
     void Awake()
