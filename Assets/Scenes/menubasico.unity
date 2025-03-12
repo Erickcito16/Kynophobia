@@ -1073,6 +1073,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &729491596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4119727558002062755, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119727558002062755, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: musicSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 59adb089ba69b904f97ca43221d158cd, type: 3}
+    - target: {fileID: 4119727558002062755, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: musicSounds.Array.data[2].nameSound
+      value: Menu Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2355769
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.89189315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.9984245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173251245898858751, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254570667001901679, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98f00c2fc25105140a72e9f7ab9a685a, type: 3}
 --- !u!1 &776680167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1969,7 @@ GameObject:
   - component: {fileID: 1714683568}
   - component: {fileID: 1714683567}
   - component: {fileID: 1714683571}
+  - component: {fileID: 1714683572}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2003,6 +2073,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f99e9dd01872a4bbac346475b42dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1714683572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714683566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80506bcb04959746859f3a6a576df2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudio: {fileID: 0}
+  musicAudio: {fileID: 0}
+  musicSavedValue: musicValue
+  sfxSavedValue: sfxValue
 --- !u!1 &1788918175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,5 +2600,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1864635690}
   - {fileID: 377528303}
+  - {fileID: 729491596}
   - {fileID: 1714683570}
   - {fileID: 677328563}
