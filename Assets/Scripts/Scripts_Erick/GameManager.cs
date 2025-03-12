@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int puntaje;
 
      public GameObject inicialText;
+     public bool isPaused;
+    [SerializeField] private GameObject menuPausa;
 
 
     void Start()
@@ -20,8 +22,9 @@ public class GameManager : MonoBehaviour
     public void IniciarJuego()
     {
         juegoIniciado = true;
+        Time.timeScale = 1f;
         FindObjectOfType<Ruta>().IniciarConstruccion();
-          inicialText.SetActive(true);
+        inicialText.SetActive(true);
     }
 
     private void Update()
@@ -31,6 +34,8 @@ public class GameManager : MonoBehaviour
             IniciarJuego();
             inicialText.SetActive(false);
         }
+
+      
     }
 
     public void GameOver()
@@ -45,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         puntaje++;
     }
+  
 
 
 }

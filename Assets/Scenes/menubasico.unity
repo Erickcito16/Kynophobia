@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: salir
+  m_text: Menu Principal
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 116db76d37ca3264cafe03349075ae0e, type: 2}
   m_sharedMaterial: {fileID: 7346634769581844926, guid: 116db76d37ca3264cafe03349075ae0e, type: 2}
@@ -4678,7 +4678,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2107789570}
+      - m_Target: {fileID: 52744432}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7073,7 +7073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: salir
+  m_text: Prologo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 116db76d37ca3264cafe03349075ae0e, type: 2}
   m_sharedMaterial: {fileID: 7346634769581844926, guid: 116db76d37ca3264cafe03349075ae0e, type: 2}
