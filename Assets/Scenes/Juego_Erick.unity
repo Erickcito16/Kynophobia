@@ -1742,7 +1742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2181325860914325712, guid: 3100f20c1a633a54ba4140a39e9b2ee7, type: 3}
       propertyPath: speed
-      value: 5.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2181325860914325712, guid: 3100f20c1a633a54ba4140a39e9b2ee7, type: 3}
       propertyPath: runSound
@@ -1758,7 +1758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2181325860914325712, guid: 3100f20c1a633a54ba4140a39e9b2ee7, type: 3}
       propertyPath: rotationSpeed
-      value: 5.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2181325860914325712, guid: 3100f20c1a633a54ba4140a39e9b2ee7, type: 3}
       propertyPath: pathUpdateRate
@@ -2344,7 +2344,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5388882097748935885, guid: fe2295d585578a04eac42a68f19ba217, type: 2}
   m_audioClip: {fileID: 8300000, guid: d330ff8da480a6642adc0c79e06b63f7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9411,5 +9411,5 @@ SceneRoots:
   - {fileID: 898513757}
   - {fileID: 1382752849}
   - {fileID: 104427620}
-  - {fileID: 1200335150}
   - {fileID: 979544832}
+  - {fileID: 1200335150}
