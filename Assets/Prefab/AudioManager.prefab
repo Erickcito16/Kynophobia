@@ -52,9 +52,11 @@ MonoBehaviour:
   musicSounds:
   - nameSound: Game Theme
     clip: {fileID: 8300000, guid: d330ff8da480a6642adc0c79e06b63f7, type: 3}
+  - nameSound: Game Over Theme
+    clip: {fileID: 8300000, guid: 1cb1c9810ff0b83409611ac3aa799ee1, type: 3}
   sfxSounds:
-  - nameSound: 
-    clip: {fileID: 0}
+  - nameSound: Collect Item
+    clip: {fileID: 8300000, guid: 211cf4d73e8573942935c14d4d9c53ae, type: 3}
 --- !u!1 &7635788779383711049
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +100,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2402754081193194214, guid: fe2295d585578a04eac42a68f19ba217, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -226,7 +228,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5388882097748935885, guid: fe2295d585578a04eac42a68f19ba217, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

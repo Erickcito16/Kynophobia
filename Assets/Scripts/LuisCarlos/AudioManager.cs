@@ -24,6 +24,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        
+        PlayMusic("Menu Theme");
+    }
+
     public void PlaySFX(string name)
     {
         Sound sfx = Array.Find(sfxSounds, x => x.nameSound == name);
