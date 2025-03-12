@@ -10,10 +10,16 @@ public class Score : MonoBehaviour
 
     public int score;
 
+
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+
+    }
+    public int GetScore()
+    {
+        return score;
 
     }
 }

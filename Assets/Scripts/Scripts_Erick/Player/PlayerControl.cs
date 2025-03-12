@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class PlayerControl : MonoBehaviour
     private Animator animator;
     private bool caminarDerecha = true;
     private GameManager gameManager;
-    
+
     private Score ScorePlayer;
+    private int puntajeMaximo = 10;
 
 
     void Awake()
@@ -22,7 +24,7 @@ public class PlayerControl : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
-      void Start()
+    void Start()
     {
         ScorePlayer = GameObject.FindObjectOfType<Score>();
     }
@@ -35,17 +37,28 @@ public class PlayerControl : MonoBehaviour
             CambiarDireccion();
         }
 
-        
+
         if (!DetectarSuelo())
         {
             animator.SetTrigger("cayendo");
         }
 
-        
+
         if (transform.position.y < -3)
         {
             gameManager.GameOver();
         }
+
+        if (ScorePlayer.GetScore() >= puntajeMaximo)
+        {
+            gameManager.MostrarMensajeVictoria();
+
+            StartCoroutine(ReiniciarJuegoCoroutine());
+
+            Debug.Log("Has Ganado");
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -57,13 +70,13 @@ public class PlayerControl : MonoBehaviour
 
         animator.SetTrigger("comenzoJuego");
 
-        
+
         rb.MovePosition(transform.position + transform.forward * 2 * Time.fixedDeltaTime);
     }
 
     private void CambiarDireccion()
     {
-        if(!gameManager.juegoIniciado)
+        if (!gameManager.juegoIniciado)
         {
             return;
         }
@@ -82,9 +95,9 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag ("Cristal"))
+        if (other.CompareTag("Cristal"))
         {
-            if(explocionDeParticulas != null)
+            if (explocionDeParticulas != null)
             {
                 explocionDeParticulas.Play();
             }
@@ -102,4 +115,16 @@ public class PlayerControl : MonoBehaviour
 
         return Physics.BoxCast(comienzoRayo.position, boxSize / 2, Vector3.down, Quaternion.identity, alturaChequeo);
     }
+
+    private IEnumerator ReiniciarJuegoCoroutine()
+    {   
+        
+            Debug.Log("Cambiaste de escena");
+            yield return new WaitForSeconds(2f);
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
+        
+    }
+
+
 }
