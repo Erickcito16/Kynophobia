@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody rb;
     public Transform comienzoRayo;
     public ParticleSystem explocionDeParticulas;
+    
 
     private Animator animator;
     private bool caminarDerecha = true;
@@ -84,6 +85,7 @@ public class PlayerControl : MonoBehaviour
                 explocionDeParticulas.Play();
             }
 
+            
 
 
             Destroy(other.gameObject);

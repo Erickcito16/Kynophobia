@@ -19,8 +19,6 @@ public class Ruta : MonoBehaviour
 
     public void CrearNuevaParteRuta()
     {
-        print("Crear Nueva Parte Ruta");
-
         Vector3 nuevaPosicion = Vector3.zero;
         float opcion = Random.Range(0, 100);
 
