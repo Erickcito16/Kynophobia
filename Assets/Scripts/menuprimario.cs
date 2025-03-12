@@ -17,6 +17,12 @@ public class menuprimario : MonoBehaviour
         Debug.Log("salir");
         Application.Quit();
     }
+    public void salirMenu()
+    {        
+        SceneManager.LoadScene("menubasico");
+        AudioManager.Instance.PlayMusic("Menu Theme");
+        
+    }
     // Update is called once per frame
     void Update()
     {
