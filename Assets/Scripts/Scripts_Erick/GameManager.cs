@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     public int puntaje;
 
 
+    void Start()
+    {
+            AudioManager.Instance.PlayMusic("Game Theme");
+        
+    }
     public void IniciarJuego()
     {
         juegoIniciado = true;
@@ -25,7 +30,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        AudioManager.Instance.PlayMusic("Game Over Theme");
+  
+        
     }
 
     public void AumentarPuntaje()

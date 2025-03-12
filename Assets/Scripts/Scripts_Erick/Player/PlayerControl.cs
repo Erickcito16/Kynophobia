@@ -7,11 +7,12 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody rb;
     public Transform comienzoRayo;
     public ParticleSystem explocionDeParticulas;
-    
 
     private Animator animator;
     private bool caminarDerecha = true;
     private GameManager gameManager;
+    
+    private Score ScorePlayer;
 
 
     void Awake()
@@ -19,6 +20,11 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         gameManager = FindObjectOfType<GameManager>();
+    }
+
+      void Start()
+    {
+        ScorePlayer = GameObject.FindObjectOfType<Score>();
     }
 
     
@@ -84,10 +90,8 @@ public class PlayerControl : MonoBehaviour
             {
                 explocionDeParticulas.Play();
             }
-
-            
-
-
+            AudioManager.Instance.PlaySFX("Collect Item");
+            ScorePlayer.UpdateScore(10);
             Destroy(other.gameObject);
             gameManager.AumentarPuntaje();
         }
