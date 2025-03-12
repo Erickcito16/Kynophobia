@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public bool juegoIniciado = false;
     public int puntaje;
+
+     public GameObject inicialText;
 
 
     void Start()
@@ -18,6 +21,7 @@ public class GameManager : MonoBehaviour
     {
         juegoIniciado = true;
         FindObjectOfType<Ruta>().IniciarConstruccion();
+          inicialText.SetActive(true);
     }
 
     private void Update()
@@ -25,6 +29,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             IniciarJuego();
+            inicialText.SetActive(false);
         }
     }
 
